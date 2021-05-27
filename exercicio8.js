@@ -16,15 +16,16 @@ const prompt = require('prompt-sync')();
         if (comerUva.toUpperCase() == 'S') {
             condicaoParada = true;
             uva.push("uva");
+            if (uva.length >= quantidadeUva) {
+                console.log("voce ja comeu todas as uvas!")
+                condicaoParada = false;
+            }
         } else if (comerUva.toUpperCase() == 'N') {
             condicaoParada = false;
+
         } else {
             console.log('Escolha entre S ou N');
         }
-    }
-    var count = 0;
-    while (count < uva.length) {
-        count++
     }
     var menosUvas = quantidadeUva - uva.length;
     console.log(`voce comeu ${uva.length} uvas`);
