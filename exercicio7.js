@@ -36,7 +36,7 @@ const prompt = require('prompt-sync')();
 
     console.log(`Olá ${name} sua familia possui ${family.length} pessoas`);
 
-
+    //iterar
     var count = 0;
     while (count < family.length) {
         console.log(family[count]);
