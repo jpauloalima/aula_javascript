@@ -7,7 +7,6 @@ const prompt = require('prompt-sync')();
     var number = prompt("Digite um numero: ");
 
     if (number >= 100 && number <= 1000) {
-        prompt("digite um numero ")
         console.log("seu numero está entre 100 e 1000 ");
 
     } else {
