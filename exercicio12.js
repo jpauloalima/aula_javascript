@@ -15,36 +15,17 @@ const prompt = require('prompt-sync')();
             condicaoDeParada = true;
         } else if (respostaCondicao.toUpperCase() == 'N') {
             condicaoDeParada = false;
-
+            //console.log(`Sua lista tem um total de ${produtos.length} itens`);
+            //console.log(`Seus itens sao: ${produtos} `)
         } else {
             console.log('Ops... voce digitou algo errado');
         }
     }
 
-    for (var i = 0; i > produtos.length; i++) {
+    for (var i = 0; i < produtos.length; i++) {
         const currentItem = produtos[i];
-        console.log(currentItem)
+        console.log(currentItem);
     }
 
-    /*var names = prompt("Digite o nome do produto ")
-
-    const arr = []
-    const continuar = []
-    var condicao = true;
-    while (condicao) {
-        var continuar = prompt("Deseja continuar  (S)(N) ");
-        arr.push(names)
-        if (continuar.toUpperCase() = "s") {
-            condicao = true;
-        } else if (continuar.toUpperCase() = "n") {
-            condicao = false;
-        } else {
-            console.log("voce digitou errado")
-        }
-    }
-    for (var i = 0; i < arr.length; i++) {
-        const currentItem = arr[i];
-        console.log(i)
-    }*/
 })();
 
