@@ -22,6 +22,8 @@ const prompt = require('prompt-sync')();
                     console.log("1 - Suporte Hardware");
                     console.log("2 - Suporte Software");
                     var optionSupportNext = prompt("Qual das opcoes deseja");
+
+
                     break;
                 case 'N':
                     return console.log("Estamos transferindo para a area de hardware ");
