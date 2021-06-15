@@ -78,13 +78,19 @@ const prompt = require('prompt-sync')();
                         var phone = prompt("Digite se telefone:");
                         var emailWork = prompt("Digite seu email:");
                         var office = prompt("Digite o cargo desejado:");
-                        var candidateData =
-                            [name,
-                                address,
-                                phone,
-                                emailWork,
-                                office];
-                        console.log(candidateData);
+                        console.log("Confirme se suas informações estãocorretas");
+                        console.log(`Nome: ${name}`);
+                        console.log(`Endereço: ${address}`);
+                        console.log(`Telefone: ${phone}`);
+                        console.log(`Email: ${emailWork}`);
+                        console.log(`Cargo: ${office}`);
+                        //var candidateData =
+                        //    [name,
+                        //       address,
+                        //       phone,
+                        //      emailWork,
+                        //     office];
+                        //console.log(candidateData);
                         stopCondition = false;
                 }
                 break;
@@ -95,8 +101,5 @@ const prompt = require('prompt-sync')();
             default:
                 console.log("ops... voce digitou algo errado");
         }
-
-
-
     }
 })();
