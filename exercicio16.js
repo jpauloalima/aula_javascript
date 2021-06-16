@@ -3,20 +3,12 @@
 const prompt = require('prompt-sync')();
 
 (() => {
-    var stopMenu = true;
     //o total de crianca sempre vai ser a soma de countFeminino + countMasculino
-    var countFeminino = 0;
-    var countMasculino = 0;
-    var countYear = 0;
-    var countMicrocephaly = 0;
-    var countCardiaco = 0;
-    var countDiabetes = 0;
+    var countFeminino = 0, countMasculino = 0, countYear = 0, countMicrocephaly = 0, countCardiaco = 0, countDiabetes = 0, countHealPlan = 0;
+
+    var stopMenu = true;
     while (stopMenu) {
-        var name = prompt("Digite o nome da criança? ");
-        var birthDay = prompt("Qual dia de nascimento? ");
-        var birthMonth = prompt("Qual mes de nascimento? ");
         var birthYear = prompt("Qual ano de nascimento? ");
-        var weigthChuild = prompt("Qual peso? ");
         var stopSex = true;
         while (stopSex) {
             console.log("Qual sexo?");
@@ -60,11 +52,38 @@ const prompt = require('prompt-sync')();
                     countDiabetes++
                     stopDiabetes = false;
                     break;
+                case "N":
+                    stopDiabetes = false;
+                    break;
+                default:
+                    console.log("Por favor digite novamente");
+                    break;
             }
         }
-        var cardiaco = prompt("Possui problemas cardiacos?  S/N ");
-        countCardiaco++
-        var healtPlan = prompt("Possui plano de saude? S/N");
+        var stopCardiaco = true;
+        while (stopCardiaco) {
+            var cardiaco = prompt("Possui problemas cardiacos?  S/N ");
+            if (cardiaco.toUpperCase() == "S") {
+                countCardiaco++
+                stopCardiaco = false;
+            } else if (cardiaco.toUpperCase() == "N") {
+                stopCardiaco = false;
+            } else {
+                console.log("Escolha a opçao correta");
+            }
+        }
+        var stopHealtPlan = true;
+        while (stopHealtPlan) {
+            var healtPlan = prompt("Possui plano de saude? S/N");
+            if (healtPlan.toUpperCase() == "S") {
+                stopHealtPlan = false;
+            } else if (healtPlan.toUpperCase() == "N") {
+                countHealPlan++
+                stopHealtPlan = false;
+            } else {
+                console.log("Por favor escolha a opção correta");
+            }
+        }
         if (birthYear == 2021) {
             countYear++
         }
@@ -101,10 +120,11 @@ const prompt = require('prompt-sync')();
                         break;
                     case "4":
                         var percentualCardiaco = (countCardiaco * 100) / totalCrianca;
-                        console.log(`O percentual de crianças com problemas cardiacos é de `);
+                        console.log(`O percentual de crianças com problemas cardiacos é de ${percentualCardiaco}`);
                         break
                     case "5":
-                        console.log(`O percentual de crianças sem plano de saude é de `);
+                        var percentualHealPlan = (countHealPlan * 100) / totalCrianca;
+                        console.log(`O percentual de crianças sem plano de saude é de ${percentualHealPlan} `);
                         break;
                     case "6":
                         var percentualMeninos = (countMasculino * 100) / totalCrianca;
