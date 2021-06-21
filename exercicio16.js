@@ -116,20 +116,20 @@ const prompt = require('prompt-sync')();
                         break;
                     case "3":
                         var percentualMicrocefalia = (countMicrocephaly * 100) / totalCrianca;
-                        console.log(`Percentual de crianças com microcefalia é de ${percentualMicrocefalia} `);
+                        console.log(`Percentual de crianças com microcefalia é de ${percentualMicrocefalia} % `);
                         break;
                     case "4":
                         var percentualCardiaco = (countCardiaco * 100) / totalCrianca;
-                        console.log(`O percentual de crianças com problemas cardiacos é de ${percentualCardiaco}`);
+                        console.log(`O percentual de crianças com problemas cardiacos é de ${percentualCardiaco} %`);
                         break
                     case "5":
                         var percentualHealPlan = (countHealPlan * 100) / totalCrianca;
-                        console.log(`O percentual de crianças sem plano de saude é de ${percentualHealPlan} `);
+                        console.log(`O percentual de crianças sem plano de saude é de ${percentualHealPlan} % `);
                         break;
                     case "6":
                         var percentualMeninos = (countMasculino * 100) / totalCrianca;
                         var percentualFeminino = (countFeminino * 100) / totalCrianca;
-                        console.log(`O percentual de meninos e meninas é de ${percentualMeninos}% meninos, e de ${percentualFeminino}% meninas `);
+                        console.log(`O percentual de meninos e meninas é de ${percentualMeninos} % meninos, e de ${percentualFeminino} % meninas `);
                         break;
                     default:
                         break;
